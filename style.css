@@ -3,15 +3,20 @@ body{
 }
 
 
-.head{
+.head {
     background-color: rgb(31, 31, 31);
-    padding: 20px;    
+    padding: 20px;     
+}
+
+.head a{
+    color: white;
 }
 
 
 a{
     text-decoration: none;
-    color: white;
+    color: black;
+    font-size: 20px;
 }
 
 
@@ -28,14 +33,13 @@ img{
 }
 
 
-button{
-    margin-top: 55px;
-    
-}
-
-
 .btn{
-    border: 2px solid black;
-    gap: 10px;
+    display: flex;
+    margin-top: 55px;
+    list-style: none;
+    gap: 50px;
+    
+    
+    
     
 }
