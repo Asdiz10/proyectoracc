@@ -1,5 +1,6 @@
 body{
     margin: 0; 
+    
 }
 
 
@@ -48,4 +49,11 @@ img{
 
 
 img{
+}
+
+
+main{
+    border: 2px solid black;
+    padding-left: 50px;
+    padding-right: 50px;
 }
