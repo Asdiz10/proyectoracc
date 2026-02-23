@@ -76,3 +76,17 @@ main {
 main img {
   width: 300px;
 }
+
+
+.dia1{
+    display: flex;
+    background-color: rgb(185, 185, 185);
+    margin-right: 350px;
+}
+
+
+.dia2{
+    display: flex;
+    background-color: rgba(53, 42, 194, 0.918);
+    margin-right: 350px;
+}
