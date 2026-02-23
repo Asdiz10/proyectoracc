@@ -27,7 +27,7 @@ header {
 }
 
 header img {
-  width: 300px;
+  width: 200px;
   margin-left: -10px;
 }
 
@@ -41,7 +41,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.801);
 }
 
-.div4 {
+.div4  {
 }
 
 .fimg {
@@ -55,12 +55,12 @@ h3 {
 }
 
 footer img {
-  width: 150px;
+  width: 200px;
 }
 
 .btn {
   display: flex;
-  margin-top: 30px;
+  margin-top: 70px;
   list-style: none;
   gap: 50px;
 }

@@ -17,7 +17,7 @@ a {
   font-size: 15px;
 }
 
-header {
+header{
   display: flex;
   justify-content: space-between;
   padding-left: 350px;
@@ -27,7 +27,7 @@ header {
 }
 
 header img {
-  width: 300px;
+  width: 200px;
   margin-left: -10px;
 }
 
@@ -55,17 +55,24 @@ h3 {
 }
 
 footer img {
-  width: 150px;
+  width: 200px;
 }
 
 .btn {
   display: flex;
-  margin-top: 30px;
+  margin-top: 70px;
   list-style: none;
   gap: 50px;
 }
 
 main {
-  height: 600px;
   background-color: rgb(231, 231, 231);
+  padding-left: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main img {
+  width: 300px;
 }
