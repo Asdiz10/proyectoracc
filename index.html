@@ -3,25 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto RACC</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <header>
-      <div>
-        <div>
-          <img src="images/logoracc.png" alt="" />
+    <div class="container">
+      <div class="card-wrapper">
+        <div class="card" id="card">
+          <div class="card-face" id="front"></div>
+          <div class="card-face card-back" id="back"></div>
         </div>
-        <nav>
-          <ul>
-            <li><a href="hecho/"></a></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </nav>
       </div>
-    </header>
-    <main></main>
-    <footer></footer>
+
+      <div class="buttons">
+        <button onclick="prevCard()">Anterior</button>
+        <button onclick="nextCard()">Siguiente</button>
+      </div>
+
+      <div class="progress" id="progress"></div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
