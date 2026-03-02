@@ -82,6 +82,7 @@ main img {
     display: flex;
     background-color: rgb(185, 185, 185);
     margin-right: 350px;
+    gap: 10px;
 }
 
 
