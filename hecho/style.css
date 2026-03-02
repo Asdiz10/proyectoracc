@@ -83,11 +83,13 @@ main img {
     background-color: rgb(185, 185, 185);
     margin-right: 350px;
     gap: 10px;
+    
 }
 
 
 .dia2{
     display: flex;
-    background-color: rgba(53, 42, 194, 0.918);
+    background-color: rgb(185, 185, 185);
     margin-right: 350px;
+    gap: 10px;
 }
