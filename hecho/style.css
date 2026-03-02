@@ -89,7 +89,9 @@ main img {
 
 .dia2{
     display: flex;
+    flex-direction: row-reverse;
     background-color: rgb(185, 185, 185);
     margin-right: 350px;
-    gap: 10px;
+    gap: 15px;
 }
+
