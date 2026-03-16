@@ -103,4 +103,28 @@ main img {
   display: flex;
   background-color: rgb(185, 185, 185);
   margin-right: 350px;
+  /*buscando el contenido*/
+
+}
+
+
+.dia5{
+  display: flex;
+  background-color: rgb(185, 185, 185);
+  margin-right: 350px;
+  /*buscando el contenido*/ 
+}
+
+
+.dia6{
+  display: flex;
+  background-color: rgb(185, 185, 185);
+  margin-right: 350px;
+  gap: 10px;
+}
+
+.dia6 img{
+  width: 500px;
+  height: 300px;
+  
 }
