@@ -95,3 +95,11 @@ main img {
     gap: 15px;
 }
 
+
+.dia3{
+    display: flex;
+    background-color: rgb(185, 185, 185);
+    margin-right: 350px;
+    gap: 15px;
+}
+

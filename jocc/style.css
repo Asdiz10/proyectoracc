@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+}
+
+.head {
+  background-color: rgb(31, 31, 31);
+  padding: 20px;
+}
+
+.head a {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 350px;
+  padding-right: 350px;
+  background-color: rgba(255, 255, 255, 0.801);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header img {
+  width: 200px;
+  margin-left: -10px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 350px;
+  padding-right: 350px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.801);
+}
+
+.div4  {
+}
+
+.fimg {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer img {
+  width: 200px;
+}
+
+.btn {
+  display: flex;
+  margin-top: 70px;
+  list-style: none;
+  gap: 50px;
+}
+
+main {
+  height: 600px;
+  background-color: rgb(231, 231, 231);
+}
+
+main img{
+  width: 500px;
+  height: 500px;
+}

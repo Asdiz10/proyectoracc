@@ -69,3 +69,8 @@ main {
   height: 600px;
   background-color: rgb(231, 231, 231);
 }
+
+main img{
+  width: 500px;
+  height: 500px;
+}
