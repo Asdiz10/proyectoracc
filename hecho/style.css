@@ -17,7 +17,7 @@ a {
   font-size: 15px;
 }
 
-header{
+header {
   display: flex;
   justify-content: space-between;
   padding-left: 350px;
@@ -77,29 +77,30 @@ main img {
   width: 300px;
 }
 
-
-.dia1{
-    display: flex;
-    background-color: rgb(185, 185, 185);
-    margin-right: 350px;
-    gap: 10px;
-    
+.dia1 {
+  display: flex;
+  background-color: rgb(185, 185, 185);
+  margin-right: 350px;
+  gap: 10px;
 }
 
-
-.dia2{
-    display: flex;
-    flex-direction: row-reverse;
-    background-color: rgb(185, 185, 185);
-    margin-right: 350px;
-    gap: 15px;
+.dia2 {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: rgb(185, 185, 185);
+  margin-right: 350px;
+  gap: 15px;
 }
 
-
-.dia3{
-    display: flex;
-    background-color: rgb(185, 185, 185);
-    margin-right: 350px;
-    gap: 15px;
+.dia3 {
+  display: flex;
+  background-color: rgb(185, 185, 185);
+  margin-right: 350px;
+  gap: 15px;
 }
 
+.dia4 {
+  display: flex;
+  background-color: rgb(185, 185, 185);
+  margin-right: 350px;
+}
