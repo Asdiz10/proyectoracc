@@ -65,6 +65,7 @@ footer img {
   gap: 50px;
 }
 
+
 main {
   background-color: rgb(231, 231, 231);
   padding-left: 350px;
@@ -73,9 +74,11 @@ main {
   gap: 20px;
 }
 
+
 main img {
   width: 300px;
 }
+
 
 .dia1 {
   display: flex;
@@ -83,6 +86,7 @@ main img {
   margin-right: 350px;
   gap: 10px;
 }
+
 
 .dia2 {
   display: flex;
@@ -92,12 +96,14 @@ main img {
   gap: 15px;
 }
 
+
 .dia3 {
   display: flex;
   background-color: rgb(185, 185, 185);
   margin-right: 350px;
   gap: 15px;
 }
+
 
 .dia4 {
   display: flex;
@@ -122,6 +128,7 @@ main img {
   margin-right: 350px;
   gap: 10px;
 }
+
 
 .dia6 img{
   width: 500px;
