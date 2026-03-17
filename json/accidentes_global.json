@@ -1,0 +1,470 @@
+{
+  "2016": [
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Alcance",
+      "TOTAL_VICTIMAS_24H": 31982,
+      "TOTAL_VEHICULOS": 45527
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello animal",
+      "TOTAL_VICTIMAS_24H": 558,
+      "TOTAL_VEHICULOS": 507
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello persona",
+      "TOTAL_VICTIMAS_24H": 15792,
+      "TOTAL_VEHICULOS": 14857
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque frontal/lateral",
+      "TOTAL_VICTIMAS_24H": 36394,
+      "TOTAL_VEHICULOS": 50291
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque lateral",
+      "TOTAL_VICTIMAS_24H": 11390,
+      "TOTAL_VEHICULOS": 18367
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Colisión obstáculo",
+      "TOTAL_VICTIMAS_24H": 3243,
+      "TOTAL_VEHICULOS": 3871
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Múltiple",
+      "TOTAL_VICTIMAS_24H": 7268,
+      "TOTAL_VEHICULOS": 11198
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Otro",
+      "TOTAL_VICTIMAS_24H": 26461,
+      "TOTAL_VEHICULOS": 24262
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Salida de vía",
+      "TOTAL_VICTIMAS_24H": 55,
+      "TOTAL_VEHICULOS": 51
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Vuelco/Caída",
+      "TOTAL_VICTIMAS_24H": 9053,
+      "TOTAL_VEHICULOS": 10364
+    }
+  ],
+  "2017": [
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Alcance",
+      "TOTAL_VICTIMAS_24H": 30969,
+      "TOTAL_VEHICULOS": 43933
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello animal",
+      "TOTAL_VICTIMAS_24H": 545,
+      "TOTAL_VEHICULOS": 507
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello persona",
+      "TOTAL_VICTIMAS_24H": 15149,
+      "TOTAL_VEHICULOS": 14160
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque frontal/lateral",
+      "TOTAL_VICTIMAS_24H": 35425,
+      "TOTAL_VEHICULOS": 49797
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque lateral",
+      "TOTAL_VICTIMAS_24H": 11289,
+      "TOTAL_VEHICULOS": 18344
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Colisión obstáculo",
+      "TOTAL_VICTIMAS_24H": 3621,
+      "TOTAL_VEHICULOS": 4324
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Múltiple",
+      "TOTAL_VICTIMAS_24H": 7031,
+      "TOTAL_VEHICULOS": 11068
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Otro",
+      "TOTAL_VICTIMAS_24H": 26246,
+      "TOTAL_VEHICULOS": 25636
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Salida de vía",
+      "TOTAL_VICTIMAS_24H": 206,
+      "TOTAL_VEHICULOS": 198
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Vuelco/Caída",
+      "TOTAL_VICTIMAS_24H": 10511,
+      "TOTAL_VEHICULOS": 12229
+    }
+  ],
+  "2018": [
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Alcance",
+      "TOTAL_VICTIMAS_24H": 29472,
+      "TOTAL_VEHICULOS": 42256
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello animal",
+      "TOTAL_VICTIMAS_24H": 572,
+      "TOTAL_VEHICULOS": 506
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello persona",
+      "TOTAL_VICTIMAS_24H": 14824,
+      "TOTAL_VEHICULOS": 13907
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque frontal/lateral",
+      "TOTAL_VICTIMAS_24H": 35633,
+      "TOTAL_VEHICULOS": 50545
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque lateral",
+      "TOTAL_VICTIMAS_24H": 10700,
+      "TOTAL_VEHICULOS": 17821
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Colisión obstáculo",
+      "TOTAL_VICTIMAS_24H": 3800,
+      "TOTAL_VEHICULOS": 4473
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Múltiple",
+      "TOTAL_VICTIMAS_24H": 6865,
+      "TOTAL_VEHICULOS": 10878
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Otro",
+      "TOTAL_VICTIMAS_24H": 27302,
+      "TOTAL_VEHICULOS": 26822
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Salida de vía",
+      "TOTAL_VICTIMAS_24H": 203,
+      "TOTAL_VEHICULOS": 180
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Vuelco/Caída",
+      "TOTAL_VICTIMAS_24H": 11044,
+      "TOTAL_VEHICULOS": 12893
+    }
+  ],
+  "2019": [
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Alcance",
+      "TOTAL_VICTIMAS_24H": 28829,
+      "TOTAL_VEHICULOS": 41510
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello animal",
+      "TOTAL_VICTIMAS_24H": 566,
+      "TOTAL_VEHICULOS": 522
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello persona",
+      "TOTAL_VICTIMAS_24H": 14961,
+      "TOTAL_VEHICULOS": 14063
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque frontal/lateral",
+      "TOTAL_VICTIMAS_24H": 36217,
+      "TOTAL_VEHICULOS": 51530
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque lateral",
+      "TOTAL_VICTIMAS_24H": 12315,
+      "TOTAL_VEHICULOS": 20298
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Colisión obstáculo",
+      "TOTAL_VICTIMAS_24H": 3417,
+      "TOTAL_VEHICULOS": 4081
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Múltiple",
+      "TOTAL_VICTIMAS_24H": 5802,
+      "TOTAL_VEHICULOS": 9444
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Otro",
+      "TOTAL_VICTIMAS_24H": 27216,
+      "TOTAL_VEHICULOS": 27632
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Salida de vía",
+      "TOTAL_VICTIMAS_24H": 53,
+      "TOTAL_VEHICULOS": 52
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Vuelco/Caída",
+      "TOTAL_VICTIMAS_24H": 11737,
+      "TOTAL_VEHICULOS": 13612
+    }
+  ],
+  "2020": [
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Alcance",
+      "TOTAL_VICTIMAS_24H": 17677,
+      "TOTAL_VEHICULOS": 25909
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello animal",
+      "TOTAL_VICTIMAS_24H": 519,
+      "TOTAL_VEHICULOS": 488
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello persona",
+      "TOTAL_VICTIMAS_24H": 9518,
+      "TOTAL_VEHICULOS": 8968
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque frontal/lateral",
+      "TOTAL_VICTIMAS_24H": 25312,
+      "TOTAL_VEHICULOS": 36985
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque lateral",
+      "TOTAL_VICTIMAS_24H": 8033,
+      "TOTAL_VEHICULOS": 13432
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Colisión obstáculo",
+      "TOTAL_VICTIMAS_24H": 2750,
+      "TOTAL_VEHICULOS": 3296
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Múltiple",
+      "TOTAL_VICTIMAS_24H": 2953,
+      "TOTAL_VEHICULOS": 4945
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Otro",
+      "TOTAL_VICTIMAS_24H": 19815,
+      "TOTAL_VEHICULOS": 20328
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Salida de vía",
+      "TOTAL_VICTIMAS_24H": 46,
+      "TOTAL_VEHICULOS": 47
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Vuelco/Caída",
+      "TOTAL_VICTIMAS_24H": 9309,
+      "TOTAL_VEHICULOS": 10559
+    }
+  ],
+  "2021": [
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Alcance",
+      "TOTAL_VICTIMAS_24H": 22713,
+      "TOTAL_VEHICULOS": 33019
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello animal",
+      "TOTAL_VICTIMAS_24H": 550,
+      "TOTAL_VEHICULOS": 543
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello persona",
+      "TOTAL_VICTIMAS_24H": 11333,
+      "TOTAL_VEHICULOS": 13251
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque frontal/lateral",
+      "TOTAL_VICTIMAS_24H": 30635,
+      "TOTAL_VEHICULOS": 44388
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque lateral",
+      "TOTAL_VICTIMAS_24H": 10197,
+      "TOTAL_VEHICULOS": 16905
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Colisión obstáculo",
+      "TOTAL_VICTIMAS_24H": 2517,
+      "TOTAL_VEHICULOS": 3175
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Múltiple",
+      "TOTAL_VICTIMAS_24H": 4440,
+      "TOTAL_VEHICULOS": 7206
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Otro",
+      "TOTAL_VICTIMAS_24H": 25862,
+      "TOTAL_VEHICULOS": 26991
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Salida de vía",
+      "TOTAL_VICTIMAS_24H": 41,
+      "TOTAL_VEHICULOS": 35
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Vuelco/Caída",
+      "TOTAL_VICTIMAS_24H": 11404,
+      "TOTAL_VEHICULOS": 12979
+    }
+  ],
+  "2022": [
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Alcance",
+      "TOTAL_VICTIMAS_24H": 24148,
+      "TOTAL_VEHICULOS": 35477
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello animal",
+      "TOTAL_VICTIMAS_24H": 568,
+      "TOTAL_VEHICULOS": 537
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello persona",
+      "TOTAL_VICTIMAS_24H": 13593,
+      "TOTAL_VEHICULOS": 12945
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque frontal/lateral",
+      "TOTAL_VICTIMAS_24H": 33545,
+      "TOTAL_VEHICULOS": 49326
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque lateral",
+      "TOTAL_VICTIMAS_24H": 10962,
+      "TOTAL_VEHICULOS": 18186
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Colisión obstáculo",
+      "TOTAL_VICTIMAS_24H": 2919,
+      "TOTAL_VEHICULOS": 3551
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Múltiple",
+      "TOTAL_VICTIMAS_24H": 4646,
+      "TOTAL_VEHICULOS": 7593
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Otro",
+      "TOTAL_VICTIMAS_24H": 26209,
+      "TOTAL_VEHICULOS": 26866
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Salida de vía",
+      "TOTAL_VICTIMAS_24H": 77,
+      "TOTAL_VEHICULOS": 77
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Vuelco/Caída",
+      "TOTAL_VICTIMAS_24H": 12909,
+      "TOTAL_VEHICULOS": 14718
+    }
+  ],
+  "2023": [
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Alcance",
+      "TOTAL_VICTIMAS_24H": 26030,
+      "TOTAL_VEHICULOS": 37623
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello animal",
+      "TOTAL_VICTIMAS_24H": 859,
+      "TOTAL_VEHICULOS": 796
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello persona",
+      "TOTAL_VICTIMAS_24H": 14089,
+      "TOTAL_VEHICULOS": 13386
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque frontal/lateral",
+      "TOTAL_VICTIMAS_24H": 35168,
+      "TOTAL_VEHICULOS": 51510
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque lateral",
+      "TOTAL_VICTIMAS_24H": 11106,
+      "TOTAL_VEHICULOS": 18675
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Colisión obstáculo",
+      "TOTAL_VICTIMAS_24H": 3120,
+      "TOTAL_VEHICULOS": 3788
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Múltiple",
+      "TOTAL_VICTIMAS_24H": 4694,
+      "TOTAL_VEHICULOS": 7554
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Otro",
+      "TOTAL_VICTIMAS_24H": 26976,
+      "TOTAL_VEHICULOS": 27246
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Salida de vía",
+      "TOTAL_VICTIMAS_24H": 109,
+      "TOTAL_VEHICULOS": 84
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Vuelco/Caída",
+      "TOTAL_VICTIMAS_24H": 13187,
+      "TOTAL_VEHICULOS": 14722
+    }
+  ],
+  "2024": [
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Alcance",
+      "TOTAL_VICTIMAS_24H": 26304,
+      "TOTAL_VEHICULOS": 37936
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello animal",
+      "TOTAL_VICTIMAS_24H": 900,
+      "TOTAL_VEHICULOS": 815
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Atropello persona",
+      "TOTAL_VICTIMAS_24H": 13942,
+      "TOTAL_VEHICULOS": 13429
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque frontal/lateral",
+      "TOTAL_VICTIMAS_24H": 35805,
+      "TOTAL_VEHICULOS": 52456
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Choque lateral",
+      "TOTAL_VICTIMAS_24H": 11261,
+      "TOTAL_VEHICULOS": 18448
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Colisión obstáculo",
+      "TOTAL_VICTIMAS_24H": 3041,
+      "TOTAL_VEHICULOS": 3702
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Múltiple",
+      "TOTAL_VICTIMAS_24H": 4530,
+      "TOTAL_VEHICULOS": 7132
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Otro",
+      "TOTAL_VICTIMAS_24H": 27435,
+      "TOTAL_VEHICULOS": 27656
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Salida de vía",
+      "TOTAL_VICTIMAS_24H": 91,
+      "TOTAL_VEHICULOS": 94
+    },
+    {
+      "TIPO_ACCIDENTE_SIMPLE": "Vuelco/Caída",
+      "TOTAL_VICTIMAS_24H": 13119,
+      "TOTAL_VEHICULOS": 14664
+    }
+  ]
+}

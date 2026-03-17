@@ -31,8 +31,80 @@
       </div>
     </header>
 
+    <section id="total-muertes">
+        <div class="numero">1.181.682</div>
+        <p class="subtitulo">Muertes totales en las carreteras</p>
+    </section>
+
     <main>
+        <section>
+            <h1>Sanciones por Distracción al Volante</h1>
+            <p>Aquí se representan las sanciones impuestas por distracción al volante en diferentes años. La distracción es una de las principales causas de accidentes en España.</p>
+            <div id="sanciones"></div>
+        </section>
+
+        <section>
+            <h1>Muertes Totales por Año</h1>
+            <p>Este gráfico muestra la evolución de las muertes totales en accidentes de tráfico en España desde 2016 hasta 2024. Se observa una tendencia a la baja en los últimos años, con un pico en 2020 debido a la pandemia.</p>
+            <div id="chart"></div>
+        </section>
         
+        
+        
+        <section>
+            <h1>Tipos de Accidentes en 2024</h1>
+            <p>Este gráfico detalla los diferentes tipos de accidentes ocurridos en 2024, clasificados por categorías como colisiones, atropellos, etc.</p>
+            <div id="tipos"></div>
+        </section>
+        
+        <section>
+            <h1>Mapa de Muertes por Comunidad Autónoma</h1>
+            <p>El mapa interactivo muestra la distribución de muertes por accidentes de tráfico en las comunidades autónomas de España para el año 2024.</p>
+            <div id="mapa"></div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <script src="https://unpkg.com/topojson-client@3"></script>
+        <script src="ca.js/graficoMuertesLinea.js"></script>
+        <script src="ca.js/graficoSancionesDistracciones.js"></script>
+        <script src="ca.js/graficoTiposAccidente.js"></script>
+        <script src="ca.js/mapaCCAA.js"></script>
+        <script>
+        d3.json("json/muertes_global.json").then(datos => {
+            crearGraficoMuertesLinea("#chart", datos);
+        });
+        d3.json("json/sanciones-al-volante-por-distracion.json").then(datos => {
+            const sancionesData = Object.entries(datos["SANCIONES AL VOLANTE POR DISTRACION"]).map(([año, sanciones]) => ({ tipo: año, sanciones }));
+            crearGraficoSancionesDistracciones("#sanciones", sancionesData);
+        });
+        d3.json("json/accidentes_global.json").then(datos => {
+            crearGraficoTiposAccidente("#tipos", datos["2024"]);
+        });
+        d3.json("json/municipios-simplified.json").then(geoData => {
+            d3.json("json/muertes_por_comunidad.json").then(datosPorComunidad => {
+                crearMapaCCAA("#mapa", geoData, datosPorComunidad, 2024);
+            });
+        });
+    </script>
+    <script>
+        // Animación del contador
+        function animateCounter() {
+            const element = document.querySelector('.numero');
+            const target = 1181682; // Número sin puntos
+            let current = 0;
+            const increment = Math.ceil(target / 500); // Ajusta para velocidad más lenta
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = current.toLocaleString('es-ES');
+            }, 30); // Intervalo en ms, un poco más lento
+        }
+        
+        // Llamar a la animación cuando se carga la página
+        window.addEventListener('load', animateCounter);
+    </script>
     </main>
 
     <footer>
