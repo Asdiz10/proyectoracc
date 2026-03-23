@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'Inter Tight', Helvetica, sans-serif;
   background: linear-gradient(135deg, #f0f4ff 0%, #e0f2fe 100%);
   color: #1e293b;
   line-height: 1.6;
@@ -49,7 +49,7 @@ header {
   padding-left: 350px;
   padding-right: 350px;
   background: linear-gradient(90deg, #dbeafe 0%, #f0f9ff 100%);
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'Inter Tight', Helvetica, sans-serif;
   border-bottom: 1px solid #e0f2fe;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
 }
@@ -68,7 +68,7 @@ footer {
   padding-top: 20px;
   background: linear-gradient(90deg, #f8fafc 0%, #e2e8f0 100%);
   border-top: 1px solid #e0f2fe;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   box-shadow: 0 -2px 8px rgba(37, 99, 235, 0.1);
 }
 
@@ -82,7 +82,7 @@ footer {
 }
 
 h3 {
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'Inter Tight', Helvetica, sans-serif;
   color: #1e293b;
   transition: color 0.3s ease;
 }
@@ -180,7 +180,7 @@ section:nth-child(even) {
   padding: 8px 12px;
   font-size: 14px;
   border-radius: 6px;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   color: #1e293b;
   box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
@@ -211,13 +211,13 @@ section h1 {
 }
 
 .numero {
-  font-size: 48px;
+  font-size: 150px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .subtitulo {
-  font-size: 18px;
+  font-size: 25px;
   color: #64748b;
 }
 
@@ -309,7 +309,223 @@ section h1 {
   }
 }
 
-/* Estilos para la página "Com s'ha fet" */
+/* ==========================================
+   Secciones de Estadísticas (entre gráficos)
+   ========================================== */
+
+.stats-banner {
+  background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
+  padding: 50px 40px;
+  margin: 40px 0;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.stats-banner-alt {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.stats-banner-title {
+  font-family: 'Inter Tight', Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.5px;
+}
+
+.stats-banner-source {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0 0 35px 0;
+  font-style: italic;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(37, 99, 235, 0.12);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.2);
+}
+
+.stat-card-highlight {
+  border-color: rgba(37, 99, 235, 0.4);
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.stat-number {
+  display: block;
+  font-family: 'Inter Tight', Helvetica, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #60a5fa;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Causes section with ring charts */
+.stats-grid-causes {
+  gap: 30px;
+}
+
+.stat-card-cause {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stat-card-cause:hover {
+  transform: translateY(-5px);
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.stat-ring {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+.stat-ring svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stat-ring-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Inter Tight', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.stat-cause-label {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Stats responsive */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats-banner {
+    padding: 40px 25px;
+  }
+  .stats-banner-title {
+    font-size: 1.5rem;
+  }
+  .stat-number {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .stats-banner {
+    padding: 30px 15px;
+  }
+  .stats-banner-title {
+    font-size: 1.3rem;
+  }
+  .stat-number {
+    font-size: 2rem;
+  }
+  .stat-ring {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* ==========================================
+   Estilos para la página "Com s'ha fet" (Diari)
+   ========================================== */
+
+/* Main container for the diary page */
+.diario-main {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 50px 20px 60px;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page title */
+.diario-titulo {
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.diario-titulo::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Diary entry cards */
 .dia1,
 .dia2,
 .dia3,
@@ -317,16 +533,19 @@ section h1 {
 .dia5,
 .dia6 {
   display: flex;
+  align-items: flex-start;
   background-color: #ffffff;
-  margin: 20px auto;
-  gap: 15px;
+  margin: 15px auto;
+  gap: 25px;
   border-radius: 12px;
-  padding: 20px;
+  padding: 28px;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
   border: 1px solid #e0f2fe;
   overflow-wrap: break-word;
-  max-width: 1200px;
-  transition: box-shadow 0.3s ease;
+  max-width: 1100px;
+  width: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: slideIn 0.8s ease-out;
 }
 
 .dia1:hover,
@@ -335,49 +554,89 @@ section h1 {
 .dia4:hover,
 .dia5:hover,
 .dia6:hover {
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.18);
+  transform: translateY(-3px);
 }
 
+/* Alternate direction for even entries */
 .dia2,
 .dia4,
 .dia6 {
   flex-direction: row-reverse;
 }
 
-.dia1 img,
-.dia2 img,
-.dia3 img,
-.dia4 img,
-.dia5 img,
-.dia6 img {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
+/* Text content wrapper */
+.contenido {
+  flex: 1;
+  min-width: 0;
 }
 
-.dia6 img {
-  width: 500px;
-  height: 300px;
+/* Section headings inside diary entries */
+.contenido h4,
+.dia1 h4,
+.dia2 h4,
+.dia3 h4,
+.dia4 h4,
+.dia5 h4,
+.dia6 h4 {
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin: 0 0 12px 0;
+  padding-left: 14px;
+  border-left: 4px solid #2563eb;
+  line-height: 1.4;
 }
 
+/* Paragraphs inside diary entries */
 .dia1 p,
 .dia2 p,
 .dia3 p,
 .dia4 p,
 .dia5 p,
 .dia6 p {
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-size: 0.95rem;
   text-align: justify;
-  line-height: 1.6;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0 0 10px 0;
 }
 
+.dia1 p:last-child,
+.dia2 p:last-child,
+.dia3 p:last-child,
+.dia4 p:last-child,
+.dia5 p:last-child,
+.dia6 p:last-child {
+  margin-bottom: 0;
+}
+
+/* Direct images inside entries (e.g. dia1 single image) */
+.dia1 > img,
+.dia2 > img,
+.dia3 > img,
+.dia4 > img,
+.dia5 > img,
+.dia6 > img {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Carousel */
 .carousel {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
-  height: 300px;
+  height: 280px;
   width: 100%;
-  max-width: 500px;
+  max-width: 420px;
+  flex-shrink: 0;
 }
 
 .carousel-inner {
@@ -402,11 +661,12 @@ section h1 {
   background: rgba(37, 99, 235, 0.8);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 8px 12px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 50%;
   transition: background 0.3s ease;
+  z-index: 2;
 }
 
 .prev:hover,
@@ -415,29 +675,40 @@ section h1 {
 }
 
 .prev {
-  left: 10px;
+  left: 8px;
 }
 
 .next {
-  right: 10px;
+  right: 8px;
 }
 
+/* Responsive */
 @media (max-width: 1024px) {
-  .dia1 img,
-  .dia2 img,
-  .dia3 img,
-  .dia4 img,
-  .dia5 img,
-  .dia6 img {
-    width: 250px;
+  .diario-titulo {
+    font-size: 2rem;
   }
-  .dia6 img {
-    width: 400px;
+  .dia1 > img,
+  .dia2 > img,
+  .dia3 > img,
+  .dia4 > img,
+  .dia5 > img,
+  .dia6 > img {
+    width: 220px;
+  }
+  .carousel {
+    max-width: 350px;
     height: 250px;
   }
 }
 
 @media (max-width: 768px) {
+  .diario-main {
+    padding: 30px 15px 40px;
+  }
+  .diario-titulo {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
   .dia1,
   .dia2,
   .dia3,
@@ -445,23 +716,20 @@ section h1 {
   .dia5,
   .dia6 {
     flex-direction: column;
-    gap: 10px;
-    padding: 15px;
+    gap: 15px;
+    padding: 20px;
   }
-  .dia1 img,
-  .dia2 img,
-  .dia3 img,
-  .dia4 img,
-  .dia5 img,
-  .dia6 img {
+  .dia1 > img,
+  .dia2 > img,
+  .dia3 > img,
+  .dia4 > img,
+  .dia5 > img,
+  .dia6 > img {
     width: 100%;
     height: auto;
   }
-  .dia6 img {
-    height: 200px;
-  }
   .carousel {
-    height: 250px;
+    height: 220px;
     max-width: 100%;
   }
 }

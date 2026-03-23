@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto RACC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="images/image.png" type="image/x-icon">
   </head>
@@ -33,7 +36,7 @@
 
     <section id="total-muertes">
         <div class="numero">0</div>
-        <p class="subtitulo">Muertes totales en las carreteras</p>
+        <p class="subtitulo">Muertes totales desde 2016-2024</p>
     </section>
 
     <main>
@@ -45,6 +48,30 @@
             <div id="sanciones"></div>
         </section>
 
+        <!-- ESTADÍSTICAS: Impacto de las distracciones -->
+        <div class="stats-banner">
+            <h2 class="stats-banner-title">El impacto real de las distracciones</h2>
+            <p class="stats-banner-source">Fuente: Estudio Línea Directa / DGT (2011-2021)</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">1 de 3</span>
+                    <span class="stat-label">Siniestros mortales ocurren por una distracción al volante</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">238.000</span>
+                    <span class="stat-label">Accidentes con víctimas causados por distracciones en la última década</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">6.200</span>
+                    <span class="stat-label">Personas fallecidas por distracciones al volante</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">30.000</span>
+                    <span class="stat-label">Heridos graves en accidentes causados por distracciones</span>
+                </div>
+            </div>
+        </div>
+
         <section>
             <div class="text-content">
                 <h1>Muertes Totales por Año</h1>
@@ -52,9 +79,55 @@
             </div>
             <div id="chart"></div>
         </section>
-        
-        
-        
+
+        <!-- ESTADÍSTICAS: Causas de distracción -->
+        <div class="stats-banner stats-banner-alt">
+            <h2 class="stats-banner-title">¿Por qué nos distraemos al volante?</h2>
+            <p class="stats-banner-source">Principales causas según atestados policiales</p>
+            <div class="stats-grid stats-grid-causes">
+                <div class="stat-card-cause">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e0f2fe" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#2563eb" stroke-width="8" stroke-dasharray="327" stroke-dashoffset="226" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                        </svg>
+                        <span class="stat-ring-number">31%</span>
+                    </div>
+                    <span class="stat-cause-label">Abstraerse de la conducción</span>
+                </div>
+                <div class="stat-card-cause">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e0f2fe" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#3b82f6" stroke-width="8" stroke-dasharray="327" stroke-dashoffset="232" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                        </svg>
+                        <span class="stat-ring-number">29%</span>
+                    </div>
+                    <span class="stat-cause-label">Cansancio y fatiga</span>
+                </div>
+                <div class="stat-card-cause">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e0f2fe" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#60a5fa" stroke-width="8" stroke-dasharray="327" stroke-dashoffset="284" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                        </svg>
+                        <span class="stat-ring-number">13%</span>
+                    </div>
+                    <span class="stat-cause-label">Mirar el entorno</span>
+                </div>
+                <div class="stat-card-cause">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e0f2fe" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="52" fill="none" stroke="#93c5fd" stroke-width="8" stroke-dasharray="327" stroke-dashoffset="297" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                        </svg>
+                        <span class="stat-ring-number">9%</span>
+                    </div>
+                    <span class="stat-cause-label">Interactuar con los ocupantes</span>
+                </div>
+            </div>
+        </div>
+
         <section>
             <div class="text-content">
                 <h1>Tipos de Accidentes</h1>
@@ -75,7 +148,31 @@
                 </select>
             </div>
         </section>
-        
+
+        <!-- ESTADÍSTICAS: Conductores y móvil -->
+        <div class="stats-banner">
+            <h2 class="stats-banner-title">Lo que dicen los conductores</h2>
+            <p class="stats-banner-source">Encuesta a 1.700 conductores · Línea Directa 2023</p>
+            <div class="stats-grid">
+                <div class="stat-card stat-card-highlight">
+                    <span class="stat-number">76%</span>
+                    <span class="stat-label">De los conductores reconoce conducir distraído con cierta frecuencia</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">500.000</span>
+                    <span class="stat-label">Multas por usar el móvil al volante entre 2018 y 2022</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">80%</span>
+                    <span class="stat-label">De siniestros mortales por distracción ocurren en vías interurbanas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">10×</span>
+                    <span class="stat-label">Más se distraen los jóvenes (18-29) respecto a los mayores de 65 años</span>
+                </div>
+            </div>
+        </div>
+
         <section>
             <div class="text-content">
                 <h1>Mapa de Muertes por Comunidad Autónoma</h1>

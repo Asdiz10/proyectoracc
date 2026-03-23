@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Diari del Projecte - RACC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
@@ -23,7 +26,7 @@
             <a href="../index.html">Inici</a>
           </li>
           <li>
-            <a href="hecho/como.html">Com s'ha fet</a>
+            <a href="como.html">Com s'ha fet</a>
           </li>
           <li>
             <a href="../jocc/joc.html">Joc</a>
@@ -31,13 +34,13 @@
         </ul>
       </div>
     </header>
-    <!--.nombre de clase sirve para crear un div con el nombre que tu quieras.-->
-    <main>
-      <h1>DIARIO</h1>
+
+    <main class="diario-main">
+      <h1 class="diario-titulo">DIARI DEL PROJECTE</h1>
 
       <div class="dia1">
         <img src="../images/nacimiento.png" alt="nacimiento" />
-        <div>
+        <div class="contenido">
           <h4>Semana 1 - Naixement del projecte</h4>
           <p>
             La primera semana es van assignar grups i rols, una vegada assignats els
@@ -48,6 +51,7 @@
           </p>
         </div>
       </div>
+
       <div class="dia2">
         <div class="carousel">
           <div class="carousel-inner">
@@ -66,13 +70,13 @@
             obtinguts les dades fiables, els netegem i organitzem per a poder
             analitzar-los i convertir-vos en gràfics clars i visuals.
           </p>
-          <br />
           <p>
             A més es van dibuixar els esbossos del disseny de la possible
             "Pàgina Principal", es poden veure en les imatges següents
           </p>
         </div>
       </div>
+
       <div class="dia3">
         <div class="carousel">
           <div class="carousel-inner">
@@ -83,21 +87,23 @@
           <button class="prev">&lt;</button>
           <button class="next">&gt;</button>
         </div>
-        <h4>Semana 3 - Disseny "Gráfic Principal"</h4>
-        <p>
-          Aquesta semana s'ha enfocat a triar els gràfics que es visualitzaran en
-          l'inici de la pàgina web. Els companys encarregats dels gràfics Héctor
-          i Hamza es van encarregar d'anar creant amb Python en Google collab
-          .json, els gràfics mostren la quantitat de morts a mesura que els anys
-          avancen.
-        </p>
-        <br />
-        <p>
-          S'ha decidit que en la pàgina web principal es mostrés el gràfic que
-          ensenya la quantitat de morts a mesura que avancen els anys, de moment
-          la idea és aquesta.
-        </p>
+        <div class="contenido">
+          <h4>Semana 3 - Disseny "Gráfic Principal"</h4>
+          <p>
+            Aquesta semana s'ha enfocat a triar els gràfics que es visualitzaran en
+            l'inici de la pàgina web. Els companys encarregats dels gràfics Héctor
+            i Hamza es van encarregar d'anar creant amb Python en Google collab
+            .json, els gràfics mostren la quantitat de morts a mesura que els anys
+            avancen.
+          </p>
+          <p>
+            S'ha decidit que en la pàgina web principal es mostrés el gràfic que
+            ensenya la quantitat de morts a mesura que avancen els anys, de moment
+            la idea és aquesta.
+          </p>
+        </div>
       </div>
+
       <div class="dia4">
         <div class="carousel">
           <div class="carousel-inner">
@@ -108,17 +114,18 @@
           <button class="prev">&lt;</button>
           <button class="next">&gt;</button>
         </div>
-        <h4>Semana 4 - Disseny "Encapçelament i Peu de Página"</h4>
-        <p>
-          La quarta semana es va acabar el disseny de l'encapçalat i el peu de pàgina
-          per a totes les pàgines de la web.
-        </p>
-        <br />
-        <p>
-          A més Héctor i Hamza van comprovar que les dades que havien recopilat
-          sobre els accidents de ela DGT eren correctes, aquestes dades las van
-          guardar a un excel compartir, com es pot veure a la imatge.
-        </p>
+        <div class="contenido">
+          <h4>Semana 4 - Disseny "Encapçelament i Peu de Página"</h4>
+          <p>
+            La quarta semana es va acabar el disseny de l'encapçalat i el peu de pàgina
+            per a totes les pàgines de la web.
+          </p>
+          <p>
+            A més Héctor i Hamza van comprovar que les dades que havien recopilat
+            sobre els accidents de ela DGT eren correctes, aquestes dades las van
+            guardar a un excel compartir, com es pot veure a la imatge.
+          </p>
+        </div>
       </div>
 
       <div class="dia5">
@@ -130,13 +137,15 @@
           <button class="prev">&lt;</button>
           <button class="next">&gt;</button>
         </div>
-        <h4>Semana 5 - Esbós del gráfics</h4>
-        <p>
-          La cinquena semana va ser per seguir buscant dades y crear esbossos dels
-          possibles gráfcs per fer-nos una idea, també es va hanr fent mini
-          ajustos a la página web sobre como sería aquest mateix diari per
-          registrar tot el treball que estem realitzant, etc.
-        </p>
+        <div class="contenido">
+          <h4>Semana 5 - Esbós del gráfics</h4>
+          <p>
+            La cinquena semana va ser per seguir buscant dades y crear esbossos dels
+            possibles gráfcs per fer-nos una idea, també es va hanr fent mini
+            ajustos a la página web sobre como sería aquest mateix diari per
+            registrar tot el treball que estem realitzant, etc.
+          </p>
+        </div>
       </div>
 
       <div class="dia6">
@@ -148,20 +157,22 @@
           <button class="prev">&lt;</button>
           <button class="next">&gt;</button>
         </div>
-        <h4>Semana 6 - Pretancament</h4>
-        <p>
-          Avui hem tingut una reunió amb el profesorat per exposar-los la nostra
-          idea un altre cop com si no s'apiguessin res del concurs i menys del
-          projecte, tot això amb la finalitat de demostrar el treball dur a
-          terme fins al moment i per a fer-los veure que podem exposar la nostra
-          idea de manera clara.
-        </p>
-        <br />
-        <p>
-          A més a més els gráfics que es veuran a la página principal seran els
-          que es poden veure a les imatges.
-        </p>
+        <div class="contenido">
+          <h4>Semana 6 - Pretancament</h4>
+          <p>
+            Avui hem tingut una reunió amb el profesorat per exposar-los la nostra
+            idea un altre cop com si no s'apiguessin res del concurs i menys del
+            projecte, tot això amb la finalitat de demostrar el treball dur a
+            terme fins al moment i per a fer-los veure que podem exposar la nostra
+            idea de manera clara.
+          </p>
+          <p>
+            A més a més els gráfics que es veuran a la página principal seran els
+            que es poden veure a les imatges.
+          </p>
+        </div>
       </div>
+
       <div class="dia7"></div>
       <div class="dia8"></div>
       <div class="dia9"></div>
