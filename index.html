@@ -16,27 +16,41 @@
         <a href="http://www.fpllefia.com" target="_blank" rel="noopener noreferrer">
             <img src="images/logollefia.png" alt="RACC" />
         </a>
-                  
         </a>
       </div>
       <div>
         <ul class="btn">
           <li>
-            <a href="index.html">Inici</a>
+            <a href="index.html">Inicio</a>
           </li>
           <li>
-            <a href="hecho/como.html">Com s'ha fet</a>
+            <a href="hecho/como.html">Cómo se hizo</a>
           </li>
           <li>
-            <a href="jocc/joc.html">Joc</a>
+            <a href="flashcards/flashcards.html">Flash-Cards</a>
           </li>
         </ul>
       </div>
     </header>
 
     <section id="total-muertes">
-        <div class="numero">0</div>
-        <p class="subtitulo">Muertes totales desde 2016-2024</p>
+        <div class="hero-content">
+            <span class="hero-kicker">VÍCTIMAS TRÁFICO EN ESPAÑA (2016-2024)</span>
+            <h1 class="hero-title">No seas uno más</h1>
+            <div class="hero-number-wrap">
+                <div class="numero">0</div>
+                <span class="hero-plus">+</span>
+            </div>
+            <p class="hero-desc">
+                Víctimas en las carreteras españolas entre 2016 y 2024.
+            </p>
+        </div>
+        <div class="scroll-down">
+            <!-- Icono SVG de flechas hacia abajo (keyboard_double_arrow_down) -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40" fill="#ffffff">
+                <path d="M480-160 240-400l56-56 184 184 184-184 56 56-240 240Zm0-320L240-720l56-56 184 184 184-184 56 56-240 240Z"/>
+            </svg>
+        </div>
     </section>
 
     <main>
@@ -86,41 +100,25 @@
             <p class="stats-banner-source">Principales causas según atestados policiales</p>
             <div class="stats-grid stats-grid-causes">
                 <div class="stat-card-cause">
-                    <div class="stat-ring">
-                        <svg viewBox="0 0 120 120">
-                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e0f2fe" stroke-width="8"/>
-                            <circle cx="60" cy="60" r="52" fill="none" stroke="#2563eb" stroke-width="8" stroke-dasharray="327" stroke-dashoffset="226" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-                        </svg>
+                    <div class="stat-ring" data-percent="31" data-color="#2563eb">
                         <span class="stat-ring-number">31%</span>
                     </div>
                     <span class="stat-cause-label">Abstraerse de la conducción</span>
                 </div>
                 <div class="stat-card-cause">
-                    <div class="stat-ring">
-                        <svg viewBox="0 0 120 120">
-                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e0f2fe" stroke-width="8"/>
-                            <circle cx="60" cy="60" r="52" fill="none" stroke="#3b82f6" stroke-width="8" stroke-dasharray="327" stroke-dashoffset="232" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-                        </svg>
+                    <div class="stat-ring" data-percent="29" data-color="#3b82f6">
                         <span class="stat-ring-number">29%</span>
                     </div>
                     <span class="stat-cause-label">Cansancio y fatiga</span>
                 </div>
                 <div class="stat-card-cause">
-                    <div class="stat-ring">
-                        <svg viewBox="0 0 120 120">
-                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e0f2fe" stroke-width="8"/>
-                            <circle cx="60" cy="60" r="52" fill="none" stroke="#60a5fa" stroke-width="8" stroke-dasharray="327" stroke-dashoffset="284" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-                        </svg>
+                    <div class="stat-ring" data-percent="13" data-color="#60a5fa">
                         <span class="stat-ring-number">13%</span>
                     </div>
                     <span class="stat-cause-label">Mirar el entorno</span>
                 </div>
                 <div class="stat-card-cause">
-                    <div class="stat-ring">
-                        <svg viewBox="0 0 120 120">
-                            <circle cx="60" cy="60" r="52" fill="none" stroke="#e0f2fe" stroke-width="8"/>
-                            <circle cx="60" cy="60" r="52" fill="none" stroke="#93c5fd" stroke-width="8" stroke-dasharray="327" stroke-dashoffset="297" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-                        </svg>
+                    <div class="stat-ring" data-percent="9" data-color="#93c5fd">
                         <span class="stat-ring-number">9%</span>
                     </div>
                     <span class="stat-cause-label">Interactuar con los ocupantes</span>
@@ -193,6 +191,39 @@
                 </select>
             </div>
         </section>
+
+        <!-- ESTADÍSTICAS: Alcohol y drogas -->
+        <div class="stats-banner stats-banner-alt">
+            <h2 class="stats-banner-title">Alcohol y drogas en siniestros mortales</h2>
+            <p class="stats-banner-source">Memoria de Toxicología · INTCF / DGT 2024</p>
+            <div class="stats-grid stats-grid-causes">
+                <div class="stat-card-cause">
+                    <div class="stat-ring" data-percent="48" data-color="#f59e0b">
+                        <span class="stat-ring-number">48%</span>
+                    </div>
+                    <span class="stat-cause-label">Conductores fallecidos dan positivo en alcohol, drogas o fármacos</span>
+                </div>
+                <div class="stat-card-cause">
+                    <div class="stat-ring" data-percent="34" data-color="#ef4444">
+                        <span class="stat-ring-number">34%</span>
+                    </div>
+                    <span class="stat-cause-label">Habían consumido alcohol — la sustancia más detectada</span>
+                </div>
+                <div class="stat-card-cause">
+                    <div class="stat-ring" data-percent="67" data-color="#a855f7">
+                        <span class="stat-ring-number">2/3</span>
+                    </div>
+                    <span class="stat-cause-label">Con tasa superior al límite penal (1,20 g/l) — intoxicación muy severa</span>
+                </div>
+                <div class="stat-card-cause">
+                    <div class="stat-ring" data-percent="16" data-color="#22d3ee">
+                        <span class="stat-ring-number">16%</span>
+                    </div>
+                    <span class="stat-cause-label">Positivo en drogas — cocaína (59%) y cannabis (43%)</span>
+                </div>
+            </div>
+        </div>
+
         <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
         <script src="https://unpkg.com/topojson-client@3"></script>
         <script src="ca.js/graficoMuertesLinea.js"></script>
@@ -302,6 +333,14 @@
         
         // Llamar a la animación cuando se carga la página
         window.addEventListener('load', animateCounter);
+
+        // Anillos de progreso con conic-gradient (sin SVG)
+        document.querySelectorAll('.stat-ring[data-percent]').forEach(ring => {
+            const percent = parseFloat(ring.dataset.percent);
+            const color = ring.dataset.color || '#2563eb';
+            const deg = (percent / 100) * 360;
+            ring.style.background = `conic-gradient(${color} ${deg}deg, rgba(255,255,255,0.1) ${deg}deg)`;
+        });
     </script>
     </main>
 
@@ -309,6 +348,10 @@
       <div class="fimg">
         <img src="images/generalitat.png" alt="Generalitat" />
         <img src="images/sctlogo.png" alt="Tránsit" />
+      </div>
+
+      <div class="team-names">
+        Hamza Saidi Tahere · Héctor Monreal Monteserrin · David Garcia Pacheco · Adam Sanchez El Mossaui
       </div>
 
       <div class="div4">

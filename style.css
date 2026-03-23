@@ -34,13 +34,14 @@ body {
 a {
   text-decoration: none;
   color: #2563eb;
-  font-size: 15px;
+  font-size: 18px; /* Texto más grande para los enlaces */
+  font-weight: 500;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 a:hover {
   color: #1d4ed8;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 header {
@@ -57,6 +58,19 @@ header {
 header img {
   width: 200px;
   margin-left: -10px;
+}
+
+.team-names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569; /* Slate 600 for a subtle look */
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0 20px;
 }
 
 footer {
@@ -210,102 +224,156 @@ section h1 {
   font-weight: 600;
 }
 
-.numero {
-  font-size: 150px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.subtitulo {
-  font-size: 25px;
-  color: #64748b;
-}
+/* ==========================================
+   Hero Section (Contador de Víctimas)
+   ========================================== */
 
 #total-muertes {
-  text-align: center;
-  padding: 200px 20px;
-  background: linear-gradient(45deg, #dbeafe, #bfdbfe, #93c5fd, #dbeafe);
-  background-size: 400% 400%;
-  color: #1e293b;
-  font-size: 24px;
-  margin: 40px 0;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
-  border-radius: 12px;
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid #2563eb;
-  animation: gradientShift 8s linear infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1); }
-  50% { box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2); }
-  100% { box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1); }
-}
-
-#total-muertes::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("gif/863860-hd_1920_1080_30fps.gif") no-repeat center center;
+  min-height: 55vh;
+  padding: 60px 20px 80px;
+  background-color: #0b1928; /* Fallback dark blue */
+  background-image: linear-gradient(to bottom, rgba(11, 25, 40, 0.8) 0%, rgba(11, 25, 40, 0.95) 100%), url('images/fondo-contador.png');
   background-size: cover;
-  filter: blur(10px);
-  z-index: -1;
+  background-position: center bottom;
+  background-attachment: scroll; /* Imagen estática, no fixed */
+  color: #ffffff;
+  text-align: center;
+  border-bottom: 2px solid #1e293b;
+  border-radius: 0; /* Sin bordes redondeados */
 }
 
-#total-muertes img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.hero-content {
+  max-width: 800px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero-kicker {
+  font-family: 'Inter Tight', Helvetica, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fca5a5; /* Light red/salmon for contrast */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  font-family: 'Inter Tight', Helvetica, sans-serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.hero-number-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.numero {
+  font-family: 'Inter Tight', Helvetica, sans-serif;
+  font-size: 9rem;
+  font-weight: 900;
+  color: #cc0000; /* Rojo Torino */
+  line-height: 0.85;
+  letter-spacing: -2px;
+}
+
+.hero-plus {
+  font-family: 'Inter Tight', Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #94a3b8;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+.hero-desc {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  z-index: 2;
+  opacity: 0.7;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-15px) translateX(-50%); }
+  60% { transform: translateY(-7px) translateX(-50%); }
 }
 
 @media (max-width: 1024px) {
   #total-muertes {
-    padding: 180px 20px;
-    margin: 30px 0;
-    font-size: 22px;
+    min-height: 45vh;
+  }
+  .hero-title {
+    font-size: 4.5rem;
   }
   .numero {
-    font-size: 60px;
+    font-size: 7.5rem;
   }
 }
 
 @media (max-width: 768px) {
   #total-muertes {
-    padding: 150px 20px;
-    margin: 20px 0;
-    font-size: 20px;
+    min-height: 40vh;
+    padding: 50px 20px 60px;
+  }
+  .hero-kicker {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+  .hero-title {
+    font-size: 3.5rem;
   }
   .numero {
-    font-size: 50px;
+    font-size: 6rem;
+  }
+  .hero-plus {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .hero-desc {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   #total-muertes {
-    padding: 120px 15px;
-    margin: 15px 0;
-    font-size: 18px;
+    min-height: 35vh;
+  }
+  .hero-title {
+    font-size: 2.8rem;
   }
   .numero {
-    font-size: 40px;
+    font-size: 4.5rem;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
   }
 }
 
@@ -427,11 +495,20 @@ section h1 {
   position: relative;
   width: 110px;
   height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.stat-ring svg {
-  width: 100%;
-  height: 100%;
+.stat-ring::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #1e293b;
 }
 
 .stat-ring-number {
@@ -443,6 +520,7 @@ section h1 {
   font-size: 1.5rem;
   font-weight: 800;
   color: #ffffff;
+  z-index: 1;
 }
 
 .stat-cause-label {
