@@ -9,19 +9,45 @@ function crearGraficoTiposAccidente(containerSelector, datos, opciones = {}) {
   if (container.empty()) return;
 
   const {
-    colorBarra = "#22c55e",
-    colorBarraHover = "#4ade80",
+    colorBarra = "#2563eb",
+    colorBarraHover = "#3b82f6",
     colorFondo = "#020617",
     colorTexto = "#e5e7eb",
     colorGrid = "#1f2937",
     padding = { top: 32, right: 24, bottom: 68, left: 80 },
-    titulo = "Víctimas por tipo de accidente"
+    titulo = "Víctimas por tipo de accidente",
   } = opciones;
 
-  const processed = datos.map(d => ({
-    tipo: d.TIPO_ACCIDENTE_SIMPLE,
-    victimas: +d.TOTAL_VICTIMAS_24H
-  }));
+  const processed = (datos || [])
+    .map((d) => {
+      if (!d) return null;
+      if (d.tipo != null && d.victimas != null) {
+        return { tipo: String(d.tipo), victimas: +d.victimas };
+      }
+      if (d.TIPO_ACCIDENTE_SIMPLE != null && d.TOTAL_VICTIMAS_24H != null) {
+        return {
+          tipo: d.TIPO_ACCIDENTE_SIMPLE,
+          victimas: +d.TOTAL_VICTIMAS_24H,
+        };
+      }
+      return null;
+    })
+    .filter(Boolean);
+
+  if (!processed.length) {
+    container.select("svg").remove();
+    container.selectAll("div.__tooltip-tipos").remove();
+    container
+      .append("div")
+      .attr("class", "__tooltip-tipos no-data")
+      .style("position", "absolute")
+      .style("color", "#f9fafb")
+      .style("padding", "0.5rem")
+      .style("background", "rgba(0,0,0,0.6)")
+      .style("border-radius", "6px")
+      .text("No hay datos para este año");
+    return;
+  }
 
   // limpiar gráfico anterior
   container.select("svg").remove();
@@ -46,25 +72,20 @@ function crearGraficoTiposAccidente(containerSelector, datos, opciones = {}) {
 
   const x = d3
     .scaleBand()
-    .domain(processed.map(d => d.tipo))
+    .domain(processed.map((d) => d.tipo))
     .range([0, innerWidth])
     .padding(0.25);
 
   const y = d3
     .scaleLinear()
-    .domain([0, d3.max(processed, d => d.victimas) * 1.1])
+    .domain([0, d3.max(processed, (d) => d.victimas) * 1.1])
     .nice()
     .range([innerHeight, 0]);
 
   // rejilla
   g.append("g")
     .attr("class", "grid")
-    .call(
-      d3
-        .axisLeft(y)
-        .tickSize(-innerWidth)
-        .tickFormat("")
-    )
+    .call(d3.axisLeft(y).tickSize(-innerWidth).tickFormat(""))
     .selectAll("line")
     .attr("stroke", colorGrid)
     .attr("stroke-opacity", 0.4);
@@ -103,45 +124,54 @@ function crearGraficoTiposAccidente(containerSelector, datos, opciones = {}) {
     .style("z-index", 20);
 
   function handleMouseOver(event, d) {
-    d3.select(this)
-      .attr("fill", colorBarraHover)
-      .attr("opacity", 1);
+    d3.select(this).attr("fill", colorBarraHover).attr("opacity", 1);
 
     tooltip
       .style("opacity", 1)
       .html(
-        `<strong>${d.tipo}</strong><br/>Víctimas en 24 h: <strong>${d3.format(",")(d.victimas)}</strong>`
+        `<strong>${d.tipo}</strong><br/>Víctimas: <strong>${d3.format(",")(d.victimas)}</strong>`,
       );
 
-    const [xPos, yPos] = d3.pointer(event, container.node());
-    tooltip.style("left", `${xPos}px`).style("top", `${yPos}px`);
+    tooltip
+      .style("left", `${event.pageX + 10}px`)
+      .style("top", `${event.pageY - 10}px`);
   }
 
   function handleMouseMove(event) {
-    const [xPos, yPos] = d3.pointer(event, container.node());
-    tooltip.style("left", `${xPos}px`).style("top", `${yPos}px`);
+    tooltip
+      .style("left", `${event.pageX + 10}px`)
+      .style("top", `${event.pageY - 10}px`);
   }
 
   function handleMouseOut() {
-    d3.select(this)
-      .attr("fill", colorBarra)
-      .attr("opacity", 0.9);
+    d3.select(this).attr("fill", colorBarra).attr("opacity", 0.9);
     tooltip.style("opacity", 0);
   }
 
   g.selectAll("rect")
     .data(processed)
     .join("rect")
-    .attr("x", d => x(d.tipo))
-    .attr("y", d => y(d.victimas))
+    .attr("x", (d) => x(d.tipo))
+    .attr("y", (d) => y(d.victimas))
     .attr("width", x.bandwidth())
-    .attr("height", d => innerHeight - y(d.victimas))
+    .attr("height", (d) => innerHeight - y(d.victimas))
     .attr("rx", 6)
     .attr("fill", colorBarra)
     .attr("opacity", 0.9)
     .on("mouseenter", handleMouseOver)
     .on("mousemove", handleMouseMove)
     .on("mouseleave", handleMouseOut);
+
+  g.selectAll("text.bar-label")
+    .data(processed)
+    .join("text")
+    .attr("class", "bar-label")
+    .attr("x", (d) => x(d.tipo) + x.bandwidth() / 2)
+    .attr("y", (d) => y(d.victimas) - 6)
+    .attr("text-anchor", "middle")
+    .attr("fill", colorTexto)
+    .attr("font-size", "10px")
+    .text((d) => d3.format(",")(d.victimas));
 
   svg
     .append("text")
@@ -150,11 +180,13 @@ function crearGraficoTiposAccidente(containerSelector, datos, opciones = {}) {
     .attr("fill", colorTexto)
     .attr("font-size", 18)
     .attr("font-weight", "600")
-    .attr("font-family", "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif")
+    .attr(
+      "font-family",
+      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    )
     .text(titulo);
 }
 
 if (typeof window !== "undefined") {
   window.crearGraficoTiposAccidente = crearGraficoTiposAccidente;
 }
-

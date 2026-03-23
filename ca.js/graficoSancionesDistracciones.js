@@ -1,26 +1,30 @@
-// graficoSancionesDistracciones.js
+e// graficoSancionesDistracciones.js
 // Requiere D3 v7 cargado previamente en el HTML
 
 // datos: array de objetos tipo
 // { "tipo": "Móvil", "sanciones": 1200 }
 
-function crearGraficoSancionesDistracciones(containerSelector, datos, opciones = {}) {
+function crearGraficoSancionesDistracciones(
+  containerSelector,
+  datos,
+  opciones = {},
+) {
   const container = d3.select(containerSelector);
   if (container.empty()) return;
 
   const {
-    colorBarra = "#f97316",
-    colorBarraHover = "#fdba74",
+    colorBarra = "#2563eb",
+    colorBarraHover = "#3b82f6",
     colorFondo = "#020617",
     colorTexto = "#e5e7eb",
     colorGrid = "#1f2937",
     padding = { top: 32, right: 24, bottom: 68, left: 80 },
-    titulo = "Sanciones por distracción al volante"
+    titulo = "Sanciones por distracción al volante",
   } = opciones;
 
-  const processed = datos.map(d => ({
+  const processed = datos.map((d) => ({
     tipo: d.tipo,
-    sanciones: +d.sanciones
+    sanciones: +d.sanciones,
   }));
 
   // limpiar gráfico anterior
@@ -46,25 +50,20 @@ function crearGraficoSancionesDistracciones(containerSelector, datos, opciones =
 
   const x = d3
     .scaleBand()
-    .domain(processed.map(d => d.tipo))
+    .domain(processed.map((d) => d.tipo))
     .range([0, innerWidth])
     .padding(0.3);
 
   const y = d3
     .scaleLinear()
-    .domain([0, d3.max(processed, d => d.sanciones) * 1.1])
+    .domain([0, d3.max(processed, (d) => d.sanciones) * 1.1])
     .nice()
     .range([innerHeight, 0]);
 
   // rejilla
   g.append("g")
     .attr("class", "grid")
-    .call(
-      d3
-        .axisLeft(y)
-        .tickSize(-innerWidth)
-        .tickFormat("")
-    )
+    .call(d3.axisLeft(y).tickSize(-innerWidth).tickFormat(""))
     .selectAll("line")
     .attr("stroke", colorGrid)
     .attr("stroke-opacity", 0.4);
@@ -103,45 +102,54 @@ function crearGraficoSancionesDistracciones(containerSelector, datos, opciones =
     .style("z-index", 20);
 
   function handleMouseOver(event, d) {
-    d3.select(this)
-      .attr("fill", colorBarraHover)
-      .attr("opacity", 1);
+    d3.select(this).attr("fill", colorBarraHover).attr("opacity", 1);
 
     tooltip
       .style("opacity", 1)
       .html(
-        `<strong>${d.tipo}</strong><br/>Sanciones: <strong>${d3.format(",")(d.sanciones)}</strong>`
+        `<strong>${d.tipo}</strong><br/>Sanciones: <strong>${d3.format(",")(d.sanciones)}</strong>`,
       );
 
-    const [xPos, yPos] = d3.pointer(event, container.node());
-    tooltip.style("left", `${xPos}px`).style("top", `${yPos}px`);
+    tooltip
+      .style("left", `${event.pageX + 10}px`)
+      .style("top", `${event.pageY - 10}px`);
   }
 
   function handleMouseMove(event) {
-    const [xPos, yPos] = d3.pointer(event, container.node());
-    tooltip.style("left", `${xPos}px`).style("top", `${yPos}px`);
+    tooltip
+      .style("left", `${event.pageX + 10}px`)
+      .style("top", `${event.pageY - 10}px`);
   }
 
   function handleMouseOut() {
-    d3.select(this)
-      .attr("fill", colorBarra)
-      .attr("opacity", 0.9);
+    d3.select(this).attr("fill", colorBarra).attr("opacity", 0.9);
     tooltip.style("opacity", 0);
   }
 
   g.selectAll("rect")
     .data(processed)
     .join("rect")
-    .attr("x", d => x(d.tipo))
-    .attr("y", d => y(d.sanciones))
+    .attr("x", (d) => x(d.tipo))
+    .attr("y", (d) => y(d.sanciones))
     .attr("width", x.bandwidth())
-    .attr("height", d => innerHeight - y(d.sanciones))
+    .attr("height", (d) => innerHeight - y(d.sanciones))
     .attr("rx", 6)
     .attr("fill", colorBarra)
     .attr("opacity", 0.9)
     .on("mouseenter", handleMouseOver)
     .on("mousemove", handleMouseMove)
     .on("mouseleave", handleMouseOut);
+
+  g.selectAll("text.bar-label")
+    .data(processed)
+    .join("text")
+    .attr("class", "bar-label")
+    .attr("x", (d) => x(d.tipo) + x.bandwidth() / 2)
+    .attr("y", (d) => y(d.sanciones) - 6)
+    .attr("text-anchor", "middle")
+    .attr("fill", colorTexto)
+    .attr("font-size", "10px")
+    .text((d) => d3.format(",")(d.sanciones));
 
   svg
     .append("text")
@@ -150,11 +158,14 @@ function crearGraficoSancionesDistracciones(containerSelector, datos, opciones =
     .attr("fill", colorTexto)
     .attr("font-size", 18)
     .attr("font-weight", "600")
-    .attr("font-family", "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif")
+    .attr(
+      "font-family",
+      "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    )
     .text(titulo);
 }
 
 if (typeof window !== "undefined") {
-  window.crearGraficoSancionesDistracciones = crearGraficoSancionesDistracciones;
+  window.crearGraficoSancionesDistracciones =
+    crearGraficoSancionesDistracciones;
 }
-

@@ -38,29 +38,63 @@
 
     <main>
         <section>
-            <h1>Sanciones por Distracción al Volante</h1>
-            <p>Aquí se representan las sanciones impuestas por distracción al volante en diferentes años. La distracción es una de las principales causas de accidentes en España.</p>
+            <div class="text-content">
+                <h1>Sanciones por Distracción al Volante</h1>
+                <p>Aquí se representan todas las sanciones impuestas por distracción al volante por año (2015-2024).</p>
+            </div>
             <div id="sanciones"></div>
         </section>
 
         <section>
-            <h1>Muertes Totales por Año</h1>
-            <p>Este gráfico muestra la evolución de las muertes totales en accidentes de tráfico en España desde 2016 hasta 2024. Se observa una tendencia a la baja en los últimos años, con un pico en 2020 debido a la pandemia.</p>
+            <div class="text-content">
+                <h1>Muertes Totales por Año</h1>
+                <p>Este gráfico muestra la evolución de las muertes totales en accidentes de tráfico en España desde 2016 hasta 2024. Se observa una tendencia a la baja en los últimos años, con un pico en 2020 debido a la pandemia.</p>
+            </div>
             <div id="chart"></div>
         </section>
         
         
         
         <section>
-            <h1>Tipos de Accidentes en 2024</h1>
-            <p>Este gráfico detalla los diferentes tipos de accidentes ocurridos en 2024, clasificados por categorías como colisiones, atropellos, etc.</p>
-            <div id="tipos"></div>
+            <div class="text-content">
+                <h1>Tipos de Accidentes</h1>
+                <p>Este gráfico detalla los diferentes tipos de accidentes ocurridos en el año seleccionado, clasificados por categorías como colisiones, atropellos, etc.</p>
+            </div>
+            <div id="tipos">
+                <select id="year-tipos">
+                    <option value="total">Total</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
         </section>
         
         <section>
-            <h1>Mapa de Muertes por Comunidad Autónoma</h1>
-            <p>El mapa interactivo muestra la distribución de muertes por accidentes de tráfico en las comunidades autónomas de España para el año 2024.</p>
-            <div id="mapa"></div>
+            <div class="text-content">
+                <h1>Mapa de Muertes por Comunidad Autónoma</h1>
+                <p>El mapa interactivo muestra la distribución de muertes por accidentes de tráfico en las comunidades autónomas de España para el año seleccionado.</p>
+            </div>
+            <div id="mapa">
+                <select id="year-mapa">
+                    <option value="total">Total</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
         </section>
         <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
         <script src="https://unpkg.com/topojson-client@3"></script>
@@ -73,15 +107,82 @@
             crearGraficoMuertesLinea("#chart", datos);
         });
         d3.json("json/sanciones-al-volante-por-distracion.json").then(datos => {
-            const sancionesData = Object.entries(datos["SANCIONES AL VOLANTE POR DISTRACION"]).map(([año, sanciones]) => ({ tipo: año, sanciones }));
-            crearGraficoSancionesDistracciones("#sanciones", sancionesData);
+            const base = datos["SANCIONES AL VOLANTE POR DISTRACION"] || {};
+            const sancionesData = Object.entries(base)
+                .sort((a, b) => a[0].localeCompare(b[0]))
+                .map(([year, value]) => ({ tipo: year, sanciones: +value }));
+
+            crearGraficoSancionesDistracciones("#sanciones", sancionesData, {
+                titulo: 'Sanciones por distracción al volante (2015-2024)',
+            });
         });
         d3.json("json/accidentes_global.json").then(datos => {
-            crearGraficoTiposAccidente("#tipos", datos["2024"]);
+            const yearSelectTipos = document.getElementById('year-tipos');
+            const savedTipos = localStorage.getItem('year-tipos') || 'total';
+            if (yearSelectTipos.querySelector(`option[value="${savedTipos}"]`)) {
+                yearSelectTipos.value = savedTipos;
+            }
+
+            const updateTipos = () => {
+                const year = yearSelectTipos.value;
+                let tiposData;
+
+                if (year === 'total' || !datos[year]) {
+                    const totales = {};
+                    Object.values(datos).forEach(array => {
+                        (array || []).forEach(item => {
+                            const tipo = item.TIPO_ACCIDENTE_SIMPLE;
+                            const victimas = +item.TOTAL_VICTIMAS_24H;
+                            totales[tipo] = (totales[tipo] || 0) + victimas;
+                        });
+                    });
+                    tiposData = Object.entries(totales).map(([tipo, victimas]) => ({ tipo, victimas }));
+                } else {
+                    tiposData = datos[year];
+                }
+
+                localStorage.setItem('year-tipos', year);
+                crearGraficoTiposAccidente("#tipos", tiposData, {
+                    titulo: year === 'total' ? 'Víctimas totales por tipo (2016-2024)' : `Víctimas por tipo (${year})`,
+                });
+            };
+
+            yearSelectTipos.addEventListener('change', updateTipos);
+            updateTipos(); // initial
         });
-        d3.json("json/municipios-simplified.json").then(geoData => {
+        d3.json("json/autonomous_regions.json").then(geoData => {
             d3.json("json/muertes_por_comunidad.json").then(datosPorComunidad => {
-                crearMapaCCAA("#mapa", geoData, datosPorComunidad, 2024);
+                const yearSelectMapa = document.getElementById('year-mapa');
+                const savedMapa = localStorage.getItem('year-mapa') || 'total';
+                if (yearSelectMapa.querySelector(`option[value="${savedMapa}"]`)) {
+                    yearSelectMapa.value = savedMapa;
+                }
+
+                const mapaPorTotal = Object.fromEntries(
+                    Object.entries(datosPorComunidad).map(([nombre, años]) => [
+                        nombre,
+                        {
+                            ...años,
+                            total: d3.sum(Object.values(años).map(Number)),
+                        },
+                    ]),
+                );
+
+                const updateMapa = () => {
+                    const year = yearSelectMapa.value;
+                    const datosMapa = year === 'total' ? mapaPorTotal : datosPorComunidad;
+
+                    localStorage.setItem('year-mapa', year);
+                    crearMapaCCAA("#mapa", geoData, datosMapa, year, {
+                        titulo:
+                            year === 'total'
+                                ? 'Muertes por comunidad autónoma (Total 2016-2024)'
+                                : `Muertes por comunidad autónoma (${year})`,
+                    });
+                };
+
+                yearSelectMapa.addEventListener('change', updateMapa);
+                updateMapa(); // initial
             });
         });
     </script>
