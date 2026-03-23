@@ -1,21 +1,46 @@
 body {
   margin: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e0f2fe 100%);
+  color: #1e293b;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .head {
-  background-color: rgb(31, 31, 31);
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
   padding: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .head a {
-  color: white;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.head a:hover {
+  color: #dbeafe;
+  transform: scale(1.05);
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #2563eb;
   font-size: 15px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: #1d4ed8;
+  transform: scale(1.05);
 }
 
 header {
@@ -23,8 +48,10 @@ header {
   justify-content: space-between;
   padding-left: 350px;
   padding-right: 350px;
-  background-color: rgba(255, 255, 255, 0.801);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(90deg, #dbeafe 0%, #f0f9ff 100%);
+  font-family: 'Inter', Helvetica, sans-serif;
+  border-bottom: 1px solid #e0f2fe;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
 }
 
 header img {
@@ -37,9 +64,12 @@ footer {
   justify-content: space-between;
   padding-left: 350px;
   padding-right: 350px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background-color: rgba(255, 255, 255, 0.801);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background: linear-gradient(90deg, #f8fafc 0%, #e2e8f0 100%);
+  border-top: 1px solid #e0f2fe;
+  font-family: 'Inter', Helvetica, sans-serif;
+  box-shadow: 0 -2px 8px rgba(37, 99, 235, 0.1);
 }
 
 .div4 {
@@ -52,7 +82,13 @@ footer {
 }
 
 h3 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
+  color: #1e293b;
+  transition: color 0.3s ease;
+}
+
+h3:hover {
+  color: #2563eb;
 }
 
 footer img {
@@ -67,9 +103,9 @@ footer img {
 }
 
 main {
-  height: auto;
-  background-color: rgb(231, 231, 231);
-  padding: 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 40px 20px;
+  min-height: calc(100vh - 200px);
 }
 
 main img {
@@ -81,11 +117,30 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  border: 1px solid #e0f2fe;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section:hover {
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+  transform: translateY(-5px);
 }
 
 section:nth-child(odd) {
@@ -108,6 +163,8 @@ section:nth-child(even) {
   height: 500px;
   margin-bottom: 0;
   position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 #chart select,
@@ -115,18 +172,42 @@ section:nth-child(even) {
 #tipos select,
 #mapa select {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ccc;
-  padding: 5px;
-  font-size: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #cbd5e1;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  font-family: 'Inter', Helvetica, sans-serif;
+  color: #1e293b;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#chart select:hover,
+#sanciones select:hover,
+#tipos select:hover,
+#mapa select:hover {
+  border-color: #2563eb;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+  transform: scale(1.02);
+}
+
+#chart select:focus,
+#sanciones select:focus,
+#tipos select:focus,
+#mapa select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 section h1 {
-  color: #333;
-  margin-bottom: 10px;
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .numero {
@@ -137,23 +218,39 @@ section h1 {
 
 .subtitulo {
   font-size: 18px;
+  color: #64748b;
 }
 
 #total-muertes {
   text-align: center;
   padding: 200px 20px;
-  background: transparent;
-  color: black;
+  background: linear-gradient(45deg, #dbeafe, #bfdbfe, #93c5fd, #dbeafe);
+  background-size: 400% 400%;
+  color: #1e293b;
   font-size: 24px;
-  margin: 0;
-  box-shadow: none;
-  border-radius: 0;
+  margin: 40px 0;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 2px solid #2563eb;
+  animation: gradientShift 8s linear infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1); }
+  50% { box-shadow: 0 8px 24px rgba(37, 99, 235, 0.2); }
+  100% { box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1); }
 }
 
 #total-muertes::before {
@@ -179,15 +276,192 @@ section h1 {
   z-index: -1;
 }
 
-.numero {
-  font-size: 72px;
-  font-weight: bold;
-  color: red;
-  margin-bottom: 10px;
+@media (max-width: 1024px) {
+  #total-muertes {
+    padding: 180px 20px;
+    margin: 30px 0;
+    font-size: 22px;
+  }
+  .numero {
+    font-size: 60px;
+  }
 }
 
-.subtitulo {
+@media (max-width: 768px) {
+  #total-muertes {
+    padding: 150px 20px;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  .numero {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  #total-muertes {
+    padding: 120px 15px;
+    margin: 15px 0;
+    font-size: 18px;
+  }
+  .numero {
+    font-size: 40px;
+  }
+}
+
+/* Estilos para la página "Com s'ha fet" */
+.dia1,
+.dia2,
+.dia3,
+.dia4,
+.dia5,
+.dia6 {
+  display: flex;
+  background-color: #ffffff;
+  margin: 20px auto;
+  gap: 15px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  border: 1px solid #e0f2fe;
+  overflow-wrap: break-word;
+  max-width: 1200px;
+  transition: box-shadow 0.3s ease;
+}
+
+.dia1:hover,
+.dia2:hover,
+.dia3:hover,
+.dia4:hover,
+.dia5:hover,
+.dia6:hover {
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+}
+
+.dia2,
+.dia4,
+.dia6 {
+  flex-direction: row-reverse;
+}
+
+.dia1 img,
+.dia2 img,
+.dia3 img,
+.dia4 img,
+.dia5 img,
+.dia6 img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.dia6 img {
+  width: 500px;
+  height: 300px;
+}
+
+.dia1 p,
+.dia2 p,
+.dia3 p,
+.dia4 p,
+.dia5 p,
+.dia6 p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+  height: 300px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: #f8fafc;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(37, 99, 235, 0.8);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
   font-size: 18px;
-  color: #333;
-  margin: 0;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(37, 99, 235, 1);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 1024px) {
+  .dia1 img,
+  .dia2 img,
+  .dia3 img,
+  .dia4 img,
+  .dia5 img,
+  .dia6 img {
+    width: 250px;
+  }
+  .dia6 img {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dia1,
+  .dia2,
+  .dia3,
+  .dia4,
+  .dia5,
+  .dia6 {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+  .dia1 img,
+  .dia2 img,
+  .dia3 img,
+  .dia4 img,
+  .dia5 img,
+  .dia6 img {
+    width: 100%;
+    height: auto;
+  }
+  .dia6 img {
+    height: 200px;
+  }
+  .carousel {
+    height: 250px;
+    max-width: 100%;
+  }
 }
