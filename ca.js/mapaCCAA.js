@@ -1,4 +1,4 @@
- v            // mapaCCAA.js
+// mapaCCAA.js
 // Requiere D3 v7 y topojson-client cargados en el HTML
 
 function crearMapaCCAA(
