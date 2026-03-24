@@ -70,12 +70,16 @@ header img {
   color: #475569; /* Slate 600 for a subtle look */
   letter-spacing: 0.5px;
   text-align: center;
-  margin: 0 20px;
+  margin-top: 20px;
+  width: 100%;
+  order: 3;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding-left: 350px;
   padding-right: 350px;
   padding-bottom: 20px;
@@ -86,8 +90,6 @@ footer {
   box-shadow: 0 -2px 8px rgba(37, 99, 235, 0.1);
 }
 
-.div4 {
-}
 
 .fimg {
   display: flex;
