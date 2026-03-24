@@ -44,11 +44,7 @@
         <div class="contenido">
           <h4>Semana 1 - Nacimiento del proyecto</h4>
           <p>
-            La primera semana se asignaron grupos y roles. Una vez asignados los
-            grups, dedicamos el día a pensar en la idea o ideas que queríamos
-            desarrollar. Debatimos ciertas ideas conjuntamente con los miembros
-            del grupo y finalmente expusimos nuestra idea al profesorado
-            para que nos dieran su opinión.
+            La primera semana nos repartimos los roles y empezamos a darle vueltas a la cabeza con diferentes ideas para el proyecto. Debatimos un montón entre todos hasta que dimos con algo que nos gustaba, y fuimos a "venderle" la idea a los profes a ver qué les parecía. ¡Por fin teníamos proyecto!
           </p>
         </div>
       </div>
@@ -57,7 +53,7 @@
         <div class="carousel">
           <div class="carousel-inner">
             <img src="../images/diseñoprueba1.jpg" alt="Diseño de prueba" />
-            <img src="../images/diseñoprueba2.jpg" alt="Diseño de prueba" />
+            <img src="../images/diseñoprueba2.jpg" alt="Diseño de prueba 2" />
           </div>
           <button class="prev">&lt;</button>
           <button class="next">&gt;</button>
@@ -65,15 +61,10 @@
         <div class="contenido">
           <h4>Semana 2 - Diseño "Página Principal"</h4>
           <p>
-            La segunda semana nos centramos en recopilar información sobre accidentes de
-            tráfico desde 2016 hasta 2024. Los compañeros Hamza y Héctor buscaron
-            y organizaron todos los datos necesarios. Una vez
-            obtenidos datos fiables, los limpiamos y organizamos para poder
-            analizarlos y convertirlos en gráficos claros y visuales.
+            Ya con luz verde, esta segunda semana nos pusimos el mono de trabajo para recopilar datos reales de accidentes de tráfico (de 2016 a 2024). Hamza y Héctor rastrearon estadísticas y empezaron a organizarlo todo. Luego hicimos una primera limpieza rápida para ir pensando en cómo dibujar los gráficos.
           </p>
           <p>
-            Además, se dibujaron los bocetos del diseño de la posible
-            "Página Principal", que se pueden ver en las imágenes siguientes.
+            En paralelo, pillamos papel y pizarra y nos pusimos a dibujar los primeros bocetos para imaginarnos cómo queríamos que fuese la página principal de la web.
           </p>
         </div>
       </div>
@@ -81,26 +72,19 @@
       <div class="dia3">
         <div class="carousel">
           <div class="carousel-inner">
-            <img src="../images/diseño1.jpg" alt="d1" />
-            <img src="../images/diseño2.jpg" alt="d2" />
-            <img src="../images/datosjs.png" alt="datosjs" />
+            <img src="../images/limpieza_de_datos.png" alt="Limpieza de datos Python" />
+            <img src="../images/limpieza_de_datos_json.png" alt="Generación de JSON" />
           </div>
           <button class="prev">&lt;</button>
           <button class="next">&gt;</button>
         </div>
         <div class="contenido">
-          <h4>Semana 3 - Diseño "Gráfico Principal"</h4>
+          <h4>Semana 3 - Limpieza de Datos con Python</h4>
           <p>
-            Esta semana se ha enfocado en elegir los gráficos que se visualizarán en
-            el inicio de la página web. Los compañeros encargados de los gráficos, Héctor
-            y Hamza, se encargaron de ir creando con Python en Google Colab
-            archivos .json. Los gráficos muestran la cantidad de muertes a medida que los años
-            avanzan.
+            Esta semana nos tocó pelearnos con el código. Usamos <strong>Python</strong> (con las librerías <code>pandas</code> y <code>openpyxl</code> en Google Colab) porque limpiar todo esto a mano iba a ser imposible. Montamos un script propio para que nos limpiara de golpe todos los Excel que nos bajamos de la DGT: borramos columnas que no servían, cruzamos las provincias con sus Comunidades Autónomas, y arreglamos los huecos en blanco.
           </p>
           <p>
-            Se ha decidido que en la página web principal se muestre el gráfico que
-            enseña la cantidad de muertes a medida que avanzan los años; de momento
-            la idea es esta.
+            Gracias a ese código pudimos escupir unos <strong>Excel bien limpios</strong> y además exportarlo todo a formato <strong>.json</strong> (ej: <code>muertes_global_por_anyo.json</code>, etc). ¡Con eso hecho, ya teníamos la base perfecta para que nuestros gráficos en D3.js se dibujaran maravillosamente!
           </p>
         </div>
       </div>
@@ -118,13 +102,10 @@
         <div class="contenido">
           <h4>Semana 4 - Diseño "Encabezado y Pie de Página"</h4>
           <p>
-            La cuarta semana se terminó el diseño del encabezado y el pie de página
-            para todas las páginas de la web.
+            Durante la cuarta semana nos centramos en dejar bien montado y funcional tanto el encabezado (el menú de arriba) como el "footer" de abajo, aplicándolo a todas las vistas de la web.
           </p>
           <p>
-            Además, Héctor y Hamza comprobaron que los datos que habían recopilado
-            sobre los accidentes de la DGT eran correctos. Guardaron estos datos en
-            un excel compartido, como se puede ver en la imagen.
+            Héctor y Hamza también estuvieron comprobando con lupa que los números que habíamos sacado con Python cuadraban bien con los informes de la DGT. Una vez verificados, subieron esos datos pulidos a un Excel compartido para que los tuviéramos a mano, como podéis ver en la captura.
           </p>
         </div>
       </div>
@@ -132,6 +113,9 @@
       <div class="dia5">
         <div class="carousel">
           <div class="carousel-inner">
+            <img src="../images/diseño1.jpg" alt="d1" />
+            <img src="../images/diseño2.jpg" alt="d2" />
+            <img src="../images/datosjs.png" alt="datosjs" />
             <img src="../images/graficoejemplo1.png" alt="ejemplo1" />
             <img src="../images/graficoejemplo2.png" alt="ejemplo2" />
           </div>
@@ -141,10 +125,7 @@
         <div class="contenido">
           <h4>Semana 5 - Bocetos de los gráficos</h4>
           <p>
-            La quinta semana sirvió para seguir buscando datos y crear bocetos de los
-            posibles gráficos para hacernos una idea. También se fueron haciendo pequeños
-            ajustes a la página web sobre cómo sería este mismo diario para
-            registrar todo el trabajo que estamos realizando, etc.
+            La quinta semana fue crucial para decidir de una vez por todas qué gráficos íbamos a colocar sí o sí en nuestra página (nuestra idea estrella era la curva de cantidad de muertes a lo largo del tiempo). A la vez, diseñamos cómo se vería este mismo "diario" que estás leyendo ahora mismo para llevar el seguimiento de los avances.
           </p>
         </div>
       </div>
@@ -161,15 +142,10 @@
         <div class="contenido">
           <h4>Semana 6 - Precierre</h4>
           <p>
-            Hoy hemos tenido una reunión con el profesorado para exponerles nuestra
-            idea otra vez, como si no supieran nada del concurso y menos del
-            proyecto. Todo esto con la finalidad de demostrar el trabajo llevado a
-            cabo hasta el momento y para hacerles ver que podemos exponer nuestra
-            idea de manera clara.
+            Hoy hemos tenido el "ensayo general" con los profes. Les vendimos la idea del proyecto actuando como si no supieran absolutamente nada de nosotros ni del tema. Nos vino genial para forzarnos a ser súper claros con nuestras explicaciones, ver si sabíamos transmitir el mensaje y pulirlo.
           </p>
           <p>
-            Además, los gráficos que se verán en la página principal serán los
-            que se pueden ver en las imágenes.
+            Además, por fin elegimos la selección definitiva de las visualizaciones y gráficos que podéis ver ahora mismo funcionando en el inicio. ¡La cosa ya va cogiendo forma!
           </p>
         </div>
       </div>
