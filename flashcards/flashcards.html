@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -29,28 +32,70 @@
       </div>
     </header>
 
+    <main class="flashcards-main">
+        <div class="container">
+          <h1 class="page-title">ENTRENA TU ATENCIÓN</h1>
+          <p class="page-desc">Haz clic en la tarjeta para ver la respuesta y usa los botones para navegar.</p>
+          
+          <div class="card-wrapper">
+            <div class="card" id="card">
+              <div class="card-face" id="front">
+                <span class="card-tag" id="category-front"></span>
+                <div class="card-text" id="question-text"></div>
+                <div class="card-hint">Haz clic para girar</div>
+              </div>
+              <div class="card-face card-back">
+                <span class="card-tag" id="category-back"></span>
+                <div class="card-content-wrapper">
+                  <div class="card-answer" id="back"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-
+          <div class="controls">
+            <div class="buttons">
+              <button onclick="prevCard()" class="nav-btn" id="prevBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
+                Anterior
+              </button>
+              <button onclick="nextCard()" class="nav-btn" id="nextBtn">
+                Siguiente
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+              </button>
+            </div>
+            
+            <div class="progress-container">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progressBar"></div>
+              </div>
+              <div class="progress-text" id="progress"></div>
+            </div>
+          </div>
+        </div>
+    </main>
 
     <footer>
-      <div class="fimg">
-        <img src="../images/generalitat.png" alt="Generalitat" />
-        <img src="../images/sctlogo.png" alt="Tránsit" />
-      </div>
+        <div class="fimg">
+            <img src="../images/generalitat.png" alt="Generalitat" />
+            <img src="../images/sctlogo.png" alt="Tránsit" />
+        </div>
 
-      <div class="div4">
-        <h3>CONCURSO:</h3>
-        <a
-          href="https://mobilitat.racc.cat/joves-i-mobilitat/"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img src="../images/logoracc.png" alt="Llefia" />
-        </a>
-      </div>
-      <div class="team-names">
-        Hamza Saidi Tahere · Héctor Monreal Monteserrin · David Garcia Pacheco · Adam Sanchez El Mossaui
-      </div>
+        <div class="team-names">
+            Hamza Saidi Tahere · Héctor Monreal Monteserin · David Garcia Pacheco · Adam Sanchez El Mossaui
+        </div>
+
+        <div class="div4">
+            <h3>CONCURSO:</h3>
+            <a
+                href="https://mobilitat.racc.cat/joves-i-mobilitat/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img src="../images/logoracc.png" alt="Llefia"/>
+            </a>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
